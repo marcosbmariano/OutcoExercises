@@ -40,15 +40,19 @@ public class Fibonnacci {
 	//numbers: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,
 	class Fibonacci{
 		
-		ArrayList<Integer> buffer;
-		
+		ArrayList<Integer> buffer;		
 		
 		public Fibonacci(){
-			buffer = new ArrayList();
+			buffer = new ArrayList<>();
 			buffer.add(0);
 			buffer.add(1);
 		}
 		
+		int nthFinonacci2(int n){
+			
+			
+			return buffer.get(n);
+		}
 		
 		
 		int nthFibonaci(int goal){
@@ -67,29 +71,13 @@ public class Fibonnacci {
 			
 		}
 		
-		
-		
 		int getFibonnacciValue(int n){
 			
 			if ( 0 == n) return 0;
-			
-			if( 1 == n || 2 == n){
-				return 1;				
-			}
-			return getFibonnacciValue( n - 1 ) + getFibonnacciValue(n - 2);			
-		}
-		
-		int getFibo(int n){
-			if ( 0 == n) return 0;
 			if ( 1 == n || 2 == n) return 1;
 			
-			return getFibo( n -1 ) + getFibo( n - 2);
+			return getFibonnacciValue( n - 1 ) + getFibonnacciValue(n - 2);			
 		}
-		
-		
-		
-		
-		
 		
 		
 	}
